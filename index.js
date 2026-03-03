@@ -53,7 +53,7 @@ io.on("connection", (socket) => {
   });
 });
 
-const PORT = 3000;
-server.listen(PORT, () =>
+// const PORT = 3000;
+server.listen(process.env.PORT, () =>
   console.log(`\n🚀  Signaling server running at http://localhost:${PORT}\n   Open the URL in TWO browser tabs to test WebRTC messaging.\n`)
 );
