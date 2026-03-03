@@ -54,6 +54,6 @@ io.on("connection", (socket) => {
 });
 
 // const PORT = 3000;
-server.listen({ port: Number(config.port) || 3000, host: '0.0.0.0' }, () =>
+server.listen({ port: process.env.PORT ? Number(process.env.PORT) : 3000, host: '0.0.0.0' }, () =>
   console.log(`\n🚀  Signaling server running at http://localhost:${PORT}\n   Open the URL in TWO browser tabs to test WebRTC messaging.\n`)
 );
